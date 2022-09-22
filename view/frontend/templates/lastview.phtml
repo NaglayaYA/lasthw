@@ -1,0 +1,22 @@
+<?php
+/** @var \Perspective\LastHw\Block\Template $block */
+
+$viewModel = $block->getViewModel();
+
+if ($currentProduct = $viewModel->getCurrentProduct()) {
+}
+if ($viewModel->isEnabled()):
+echo '<b>Параметр X:</b>' . $viewModel->getXQty(). '<br />';
+endif;
+
+$id = $currentProduct->getId();
+$_productStock = $viewModel->getStockItem($id);
+echo "<br><hr>";
+$y = $_productStock->getQty();
+if ($_productStock->getQty()<$viewModel->getXQty()){
+    echo '<b>Заканчивается</br>'. '</b>';
+    echo "<b> Осталось $y единиц </b>";
+
+}
+
+?>

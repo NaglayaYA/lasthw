@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_LastHw::perspective" title="Perspective" module="Perspective_LastHw" sortOrder="51" resource="Perspective_LastHw::perspective"/>
+        <add id="Perspective_LastHw::perspective_configuration" title="Configuration" module="Perspective_LastHw" sortOrder="99" parent="Perspective_LastHw::perspective" action="adminhtml/system_config/edit/section/perspective" resource="Perspective_LastHw::perspective"/>
+    </menu>
+</config>
